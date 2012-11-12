@@ -1,0 +1,23 @@
+<h1>Listing handbook_abroad_traveling_reasons</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @handbook_abroad_traveling_reasons.each do |handbook_abroad_traveling_reason| %>
+  <tr>
+    <td><%= handbook_abroad_traveling_reason.name %></td>
+    <td><%= link_to 'Show', handbook_abroad_traveling_reason %></td>
+    <td><%= link_to 'Edit', edit_handbook_abroad_traveling_reason_path(handbook_abroad_traveling_reason) %></td>
+    <td><%= link_to 'Destroy', handbook_abroad_traveling_reason, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Handbook abroad traveling reason', new_handbook_abroad_traveling_reason_path %>

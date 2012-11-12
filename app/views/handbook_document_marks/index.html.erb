@@ -1,0 +1,23 @@
+<h1>Listing handbook_document_marks</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @handbook_document_marks.each do |handbook_document_mark| %>
+  <tr>
+    <td><%= handbook_document_mark.name %></td>
+    <td><%= link_to 'Show', handbook_document_mark %></td>
+    <td><%= link_to 'Edit', edit_handbook_document_mark_path(handbook_document_mark) %></td>
+    <td><%= link_to 'Destroy', handbook_document_mark, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Handbook document mark', new_handbook_document_mark_path %>

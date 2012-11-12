@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Fullname:</b>
+  <%= @handbook_division.fullname %>
+</p>
+
+<p>
+  <b>Shortname:</b>
+  <%= @handbook_division.shortname %>
+</p>
+
+
+<%= link_to 'Edit', edit_handbook_division_path(@handbook_division) %> |
+<%= link_to 'Back', handbook_divisions_path %>

@@ -1,0 +1,21 @@
+<%= form_for(@handbook_form_admission) do |f| %>
+  <% if @handbook_form_admission.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@handbook_form_admission.errors.count, "error") %> prohibited this handbook_form_admission from being saved:</h2>
+
+      <ul>
+      <% @handbook_form_admission.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

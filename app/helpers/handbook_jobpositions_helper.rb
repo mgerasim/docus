@@ -1,0 +1,2 @@
+module HandbookJobpositionsHelper
+end

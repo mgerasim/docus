@@ -1,4 +1,21 @@
 Docus::Application.routes.draw do
+  get "page/Main"
+
+  resources :handbook_document_marks
+
+  resources :handbook_form_admissions
+
+  resources :handbook_abroad_traveling_reasons
+
+  resources :handbook_jobpositions
+
+  resources :handbook_divisions
+
+  resources :handbook_structual_units
+
+  resources :handbook_place_employees
+
+  root :to => 'page#Main'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

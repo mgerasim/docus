@@ -1,0 +1,25 @@
+<%= form_for(@handbook_structual_unit) do |f| %>
+  <% if @handbook_structual_unit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@handbook_structual_unit.errors.count, "error") %> prohibited this handbook_structual_unit from being saved:</h2>
+
+      <ul>
+      <% @handbook_structual_unit.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :fullname %><br />
+    <%= f.text_field :fullname %>
+  </div>
+  <div class="field">
+    <%= f.label :shortname %><br />
+    <%= f.text_field :shortname %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
