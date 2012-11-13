@@ -1,0 +1,49 @@
+<%= form_for(@abroad) do |f| %>
+  <% if @abroad.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@abroad.errors.count, "error") %> prohibited this abroad from being saved:</h2>
+
+      <ul>
+      <% @abroad.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :employee %><br />
+    <%= f.text_field :employee %>
+  </div>
+  <div class="field">
+    <%= f.label :country %><br />
+    <%= f.text_field :country %>
+  </div>
+  <div class="field">
+    <%= f.label :date_to %><br />
+    <%= f.text_field :date_to %>
+  </div>
+  <div class="field">
+    <%= f.label :purpose %><br />
+    <%= f.text_field :purpose %>
+  </div>
+  <div class="field">
+    <%= f.label :awareness_conclusion %><br />
+    <%= f.text_field :awareness_conclusion %>
+  </div>
+  <div class="field">
+    <%= f.label :making_on_out %><br />
+    <%= f.text_field :making_on_out %>
+  </div>
+  <div class="field">
+    <%= f.label :solution_output %><br />
+    <%= f.text_field :solution_output %>
+  </div>
+  <div class="field">
+    <%= f.label :additional_data %><br />
+    <%= f.text_area :additional_data %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

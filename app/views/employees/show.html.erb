@@ -1,0 +1,120 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b><%= Employee.human_attribute_name(:lastname) %>:</b>
+  <%= @employee.lastname %>
+</p>
+
+<p>
+  <b><%= Employee.human_attribute_name(:firstname) %>:</b>
+  <%= @employee.firstname %>
+</p>
+
+<p>
+  <b><%= Employee.human_attribute_name(:secondname) %>:</b>
+  <%= @employee.secondname %>
+</p>
+
+<p>
+  <b><%= Employee.human_attribute_name(:initials) %>:</b>
+  <%= @employee.initials %>
+</p>
+
+<p>
+  <b><%= Employee.human_attribute_name(:handbook_place_employee) %>:</b>
+  <%= @employee.handbook_place_employee.fullname %>
+</p>
+
+<p>
+  <b><%= Employee.human_attribute_name(:handbook_structual_unit) %>:</b>
+  <%= @employee.handbook_structual_unit.fullname %>
+</p>
+
+<p>
+  <b><%= Employee.human_attribute_name(:handbook_division) %>:</b>
+  <%= @employee.handbook_division.fullname %>
+</p>
+
+<p>
+  <b><%= Employee.human_attribute_name(:handbook_jobposition) %>:</b>
+  <%= @employee.handbook_jobposition.fullname %>
+</p>
+
+<p>
+  <b><%= Employee.human_attribute_name(:appointment_date) %>:</b>
+  <%= @employee.appointment_date %>
+</p>
+
+<p>
+  <b><%= Employee.human_attribute_name(:admission) %>:</b>
+  <%= @employee.admission %>
+</p>
+
+<p>
+  <b><%= Employee.human_attribute_name(:previous_job_awareness) %>:</b>
+  <%= @employee.previous_job_awareness %>
+</p>
+
+<p>
+  <b><%= Employee.human_attribute_name(:admission_approval) %>:</b>
+  <%= @employee.admission_approval %>
+</p>
+
+<p>
+  <b><%= Employee.human_attribute_name(:admission_order) %></b>
+  <%= @employee.admission_order %>
+</p>
+
+<p>
+  <b><%= Employee.human_attribute_name(:temporary_restriction_of_exit_from_russia_contact_date) %>:</b>
+  <%= @employee.temporary_restriction_of_exit_from_russia_contact_date %>
+</p>
+
+<p>
+  <b><%= Employee.human_attribute_name(:dismissal_order) %>:</b>
+  <%= @employee.dismissal_order %>
+</p>
+
+<p>
+  <b><%= Employee.human_attribute_name(:admission_act_of_termination) %>:</b>
+  <%= @employee.admission_act_of_termination %>
+</p>
+
+<p>
+  <b><%= Employee.human_attribute_name(:admission_message_of_termination) %>:</b>
+  <%= @employee.admission_message_of_termination %>
+</p>
+
+<p>
+  <b><%= Employee.human_attribute_name(:foreign_passport) %>:</b>
+  <%= @employee.foreign_passport %>
+</p>
+
+<p>
+  <b><%= Employee.human_attribute_name(:passport_number) %>:</b>
+  <%= @employee.passport_number %>
+</p>
+
+<p>
+  <b><%= Employee.human_attribute_name(:passport_issuing_authority) %>:</b>
+  <%= @employee.passport_issuing_authority %>
+</p>
+
+<p>
+  <b><%= Employee.human_attribute_name(:having_relatives_abroad) %>:</b>
+  <%= @employee.having_relatives_abroad %>
+</p>
+
+<p>
+  <b><%= Employee.human_attribute_name(:who_abroad) %>:</b>
+  <%= @employee.who_abroad %>
+</p>
+
+<p>
+  <b><%= Employee.human_attribute_name(:additional_information) %>:</b>
+  <%= @employee.additional_information %>
+</p>
+
+
+<%= link_to 'Редактировать', edit_employee_path(@employee) %> |
+<%= link_to 'Назад', employees_path %>

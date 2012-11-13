@@ -1,0 +1,67 @@
+<h1>Список сотрудников</h1>
+
+<table>
+  <tr>
+    <th><%= Employee.human_attribute_name(:lastname) %></th>
+    <th><%= Employee.human_attribute_name(:firstname) %></th>
+    <th><%= Employee.human_attribute_name(:secondname) %></th>
+    <th><%= Employee.human_attribute_name(:initials) %></th>
+    <th><%= Employee.human_attribute_name(:handbook_place_employee) %></th>
+    <th><%= Employee.human_attribute_name(:handbook_structual_unit) %></th>
+    <th><%= Employee.human_attribute_name(:handbook_division) %></th>
+    <th><%= Employee.human_attribute_name(:handbook_jobposition) %></th>
+    <th><%= Employee.human_attribute_name(:appointment_date) %></th>
+    <th><%= Employee.human_attribute_name(:admission) %></th>
+    <th><%= Employee.human_attribute_name(:previous_job_awareness) %></th>
+    <th><%= Employee.human_attribute_name(:admission_approval) %></th>
+    <th><%= Employee.human_attribute_name(:admission_order) %></th>
+    <th><%= Employee.human_attribute_name(:temporary_restriction_of_exit_from_russia_contact_date) %></th>
+    <th><%= Employee.human_attribute_name(:dismissal_order) %></th>
+    <th><%= Employee.human_attribute_name(:admission_act_of_termination) %></th>
+    <th><%= Employee.human_attribute_name(:admission_message_of_termination) %></th>
+    <th><%= Employee.human_attribute_name(:foreign_passport) %></th>
+    <th><%= Employee.human_attribute_name(:passport_number) %></th>
+    <th><%= Employee.human_attribute_name(:passport_issuing_authority) %></th>
+    <th><%= Employee.human_attribute_name(:having_relatives_abroad) %></th>
+    <th><%= Employee.human_attribute_name(:who_abroad) %></th>
+    <th><%= Employee.human_attribute_name(:additional_information) %></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @employees.each do |employee| %>
+  <tr>
+    <td><%= employee.lastname %></td>
+    <td><%= employee.firstname %></td>
+    <td><%= employee.secondname %></td>
+    <td><%= employee.initials %></td>
+    <td><%= employee.handbook_place_employee.fullname %></td>
+    <td><%= employee.handbook_structual_unit.fullname %></td>
+    <td><%= employee.handbook_division.fullname %></td>
+    <td><%= employee.handbook_jobposition.fullname %></td>
+    <td><%= employee.appointment_date %></td>
+    <td><%= employee.admission %></td>
+    <td><%= employee.previous_job_awareness %></td>
+    <td><%= employee.admission_approval %></td>
+    <td><%= employee.admission_order %></td>
+    <td><%= employee.temporary_restriction_of_exit_from_russia_contact_date %></td>
+    <td><%= employee.dismissal_order %></td>
+    <td><%= employee.admission_act_of_termination %></td>
+    <td><%= employee.admission_message_of_termination %></td>
+    <td><%= employee.foreign_passport %></td>
+    <td><%= employee.passport_number %></td>
+    <td><%= employee.passport_issuing_authority %></td>
+    <td><%= employee.having_relatives_abroad %></td>
+    <td><%= employee.who_abroad %></td>
+    <td><%= employee.additional_information %></td>
+    <td><%= link_to 'Показать', employee %></td>
+    <td><%= link_to 'Редактировать', edit_employee_path(employee) %></td>
+    <td><%= link_to 'Удалить', employee, method: :delete, data: { confirm: 'Вы уверены?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Новый сотрудник', new_employee_path %>

@@ -1,4 +1,8 @@
 Docus::Application.routes.draw do
+  resources :abroads
+
+  resources :employees
+
   get "page/Main"
 
   resources :handbook_document_marks

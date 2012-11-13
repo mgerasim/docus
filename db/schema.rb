@@ -11,7 +11,55 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121112000910) do
+ActiveRecord::Schema.define(:version => 20121112225658) do
+
+  create_table "abroads", :force => true do |t|
+    t.integer  "employee_id"
+    t.string   "country"
+    t.string   "date_to"
+    t.string   "purpose"
+    t.string   "awareness_conclusion"
+    t.string   "making_on_out"
+    t.string   "solution_output"
+    t.text     "additional_data"
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
+  end
+
+  add_index "abroads", ["employee_id"], :name => "index_abroads_on_employee_id"
+
+  create_table "employees", :force => true do |t|
+    t.string   "lastname"
+    t.string   "firstname"
+    t.string   "secondname"
+    t.string   "initials"
+    t.integer  "handbook_place_employee_id"
+    t.integer  "handbook_structual_unit_id"
+    t.integer  "handbook_division_id"
+    t.integer  "handbook_jobposition_id"
+    t.string   "appointment_date"
+    t.string   "admission"
+    t.string   "previous_job_awareness"
+    t.string   "admission_approval"
+    t.string   "admission_order"
+    t.string   "temporary_restriction_of_exit_from_russia_contact_date"
+    t.string   "dismissal_order"
+    t.string   "admission_act_of_termination"
+    t.string   "admission_message_of_termination"
+    t.string   "foreign_passport"
+    t.string   "passport_number"
+    t.string   "passport_issuing_authority"
+    t.string   "having_relatives_abroad"
+    t.string   "who_abroad"
+    t.text     "additional_information"
+    t.datetime "created_at",                                             :null => false
+    t.datetime "updated_at",                                             :null => false
+  end
+
+  add_index "employees", ["handbook_division_id"], :name => "index_employees_on_handbook_division_id"
+  add_index "employees", ["handbook_jobposition_id"], :name => "index_employees_on_handbook_jobposition_id"
+  add_index "employees", ["handbook_place_employee_id"], :name => "index_employees_on_handbook_place_employee_id"
+  add_index "employees", ["handbook_structual_unit_id"], :name => "index_employees_on_handbook_structual_unit_id"
 
   create_table "handbook_abroad_traveling_reasons", :force => true do |t|
     t.string   "name"

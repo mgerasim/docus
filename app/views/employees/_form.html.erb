@@ -1,0 +1,109 @@
+<%= form_for(@employee) do |f| %>
+  <% if @employee.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@employee.errors.count, "error") %> prohibited this employee from being saved:</h2>
+
+      <ul>
+      <% @employee.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :lastname %><br />
+    <%= f.text_field :lastname %>
+  </div>
+  <div class="field">
+    <%= f.label :firstname %><br />
+    <%= f.text_field :firstname %>
+  </div>
+  <div class="field">
+    <%= f.label :secondname %><br />
+    <%= f.text_field :secondname %>
+  </div>
+  <div class="field">
+    <%= f.label :initials %><br />
+    <%= f.text_field :initials %>
+  </div>
+  <div class="field">
+    <%= f.label :handbook_place_employee %><br />
+    <%= f.collection_select :handbook_place_employee_id, HandbookPlaceEmployee.all, :id, :fullname %>
+  </div>
+  <div class="field">
+    <%= f.label :handbook_structual_unit %><br />
+    <%= f.collection_select :handbook_structual_unit_id, HandbookStructualUnit.all, :id, :fullname %>
+  </div>
+  <div class="field">
+    <%= f.label :handbook_division %><br />
+    <%= f.collection_select :handbook_division_id, HandbookDivision.all, :id, :fullname %>
+  </div>
+  <div class="field">
+    <%= f.label :handbook_jobposition %><br />
+    <%= f.collection_select :handbook_jobposition_id, HandbookJobposition.all, :id, :fullname %>    
+  </div>
+  <div class="field">
+    <%= f.label :appointment_date %><br />
+    <%= f.text_field :appointment_date %>
+  </div>
+  <div class="field">
+    <%= f.label :admission %><br />
+    <%= f.select :admission, Employee::ADMISSION_ENUM %>
+  </div>
+  <div class="field">
+    <%= f.label :previous_job_awareness %><br />
+    <%= f.text_field :previous_job_awareness %>
+  </div>
+  <div class="field">
+    <%= f.label :admission_approval %><br />
+    <%= f.text_field :admission_approval %>
+  </div>
+  <div class="field">
+    <%= f.label :admission_order %><br />
+    <%= f.text_field :admission_order %>
+  </div>
+  <div class="field">
+    <%= f.label :temporary_restriction_of_exit_from_russia_contact_date %><br />
+    <%= f.text_field :temporary_restriction_of_exit_from_russia_contact_date %>
+  </div>
+  <div class="field">
+    <%= f.label :dismissal_order %><br />
+    <%= f.text_field :dismissal_order %>
+  </div>
+  <div class="field">
+    <%= f.label :admission_act_of_termination %><br />
+    <%= f.text_field :admission_act_of_termination %>
+  </div>
+  <div class="field">
+    <%= f.label :admission_message_of_termination %><br />
+    <%= f.text_field :admission_message_of_termination %>
+  </div>
+  <div class="field">
+    <%= f.label :foreign_passport %><br />
+    <%= f.select :foreign_passport, Employee::FOREIGN_PASSPORT_ENUM %>
+  </div>
+  <div class="field">
+    <%= f.label :passport_number %><br />
+    <%= f.text_field :passport_number %>
+  </div>
+  <div class="field">
+    <%= f.label :passport_issuing_authority %><br />
+    <%= f.text_field :passport_issuing_authority %>
+  </div>
+  <div class="field">
+    <%= f.label :having_relatives_abroad %><br />
+    <%= f.select :having_relatives_abroad, Employee::HAVING_RELATIVES_ABROAD_ENUM %>
+  </div>
+  <div class="field">
+    <%= f.label :who_abroad %><br />
+    <%= f.text_field :who_abroad %>
+  </div>
+  <div class="field">
+    <%= f.label :additional_information %><br />
+    <%= f.text_area :additional_information %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
