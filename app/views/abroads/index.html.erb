@@ -1,15 +1,15 @@
-<h1>Listing abroads</h1>
+<h1>Выезды за границу</h1>
 
 <table>
   <tr>
-    <th>Employee</th>
-    <th>Country</th>
-    <th>Date to</th>
-    <th>Purpose</th>
-    <th>Awareness conclusion</th>
-    <th>Making on out</th>
-    <th>Solution output</th>
-    <th>Additional data</th>
+    <th><%= Abroad.human_attribute_name(:employee_id) %></th>
+    <th><%= Abroad.human_attribute_name(:country) %></th>
+    <th><%= Abroad.human_attribute_name(:date_to) %></th>
+    <th><%= Abroad.human_attribute_name(:purpose) %></th>
+    <th><%= Abroad.human_attribute_name(:awareness_conclusion) %></th>
+    <th><%= Abroad.human_attribute_name(:making_on_out) %></th>
+    <th><%= Abroad.human_attribute_name(:solution_output) %></th>
+    <th><%= Abroad.human_attribute_name(:additional_data) %></th>
     <th></th>
     <th></th>
     <th></th>
@@ -25,13 +25,13 @@
     <td><%= abroad.making_on_out %></td>
     <td><%= abroad.solution_output %></td>
     <td><%= abroad.additional_data %></td>
-    <td><%= link_to 'Show', abroad %></td>
-    <td><%= link_to 'Edit', edit_abroad_path(abroad) %></td>
-    <td><%= link_to 'Destroy', abroad, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Показать', abroad %></td>
+    <td><%= link_to 'Редактировать', edit_abroad_path(abroad) %></td>
+    <td><%= link_to 'Удалить', abroad, method: :delete, data: { confirm: 'Вы уверены?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Abroad', new_abroad_path %>
+<%= link_to 'Добавить', new_abroad_path %>
