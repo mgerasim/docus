@@ -1,0 +1,65 @@
+<%= form_for(@document) do |f| %>
+  <% if @document.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@document.errors.count, "error") %> prohibited this document from being saved:</h2>
+
+      <ul>
+      <% @document.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :docdate %><br />
+    <%= f.date_select :docdate %>
+  </div>
+  <div class="field">
+    <%= f.label :docnumber %><br />
+    <%= f.text_field :docnumber %>
+  </div>
+  <div class="field">
+    <%= f.label :source %><br />
+    <%= f.text_field :source %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :summary %><br />
+    <%= f.text_area :summary %>
+  </div>
+  <div class="field">
+    <%= f.label :subject %><br />
+    <%= f.text_field :subject %>
+  </div>
+  <div class="field">
+    <%= f.label :security_classification %><br />
+    <%= f.text_field :security_classification %>
+  </div>
+  <div class="field">
+    <%= f.label :mark %><br />
+    <%= f.text_field :mark %>
+  </div>
+  <div class="field">
+    <%= f.label :registration_date %><br />
+    <%= f.date_select :registration_date %>
+  </div>
+  <div class="field">
+    <%= f.label :registration_number %><br />
+    <%= f.text_field :registration_number %>
+  </div>
+  <div class="field">
+    <%= f.label :location_document %><br />
+    <%= f.text_field :location_document %>
+  </div>
+  <div class="field">
+    <%= f.label :file_number %><br />
+    <%= f.text_field :file_number %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

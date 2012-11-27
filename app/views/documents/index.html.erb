@@ -1,0 +1,45 @@
+<h1>Список документов</h1>
+
+<table>
+  <tr>
+    <th><%= Document.human_attribute_name(:docdate) %></th>
+    <th><%= Document.human_attribute_name(:docnumber) %></th>
+    <th><%= Document.human_attribute_name(:source) %></th>
+    <th><%= Document.human_attribute_name(:name) %></th>
+    <th><%= Document.human_attribute_name(:summary) %></th>
+    <th><%= Document.human_attribute_name(:subject) %></th>
+    <th><%= Document.human_attribute_name(:security_classification) %></th>
+    <th><%= Document.human_attribute_name(:mark) %></th>
+    <th><%= Document.human_attribute_name(:registration_date) %></th>
+    <th><%= Document.human_attribute_name(:registration_number) %></th>
+    <th><%= Document.human_attribute_name(:location_document) %></th>
+    <th><%= Document.human_attribute_name(:file_number) %></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @documents.each do |document| %>
+  <tr>
+    <td><%= document.docdate %></td>
+    <td><%= document.docnumber %></td>
+    <td><%= document.source %></td>
+    <td><%= document.name %></td>
+    <td><%= document.summary %></td>
+    <td><%= document.subject %></td>
+    <td><%= document.security_classification %></td>
+    <td><%= document.mark %></td>
+    <td><%= document.registration_date %></td>
+    <td><%= document.registration_number %></td>
+    <td><%= document.location_document %></td>
+    <td><%= document.file_number %></td>
+    <td><%= link_to 'Показать', document %></td>
+    <td><%= link_to 'Редактировать', edit_document_path(document) %></td>
+    <td><%= link_to 'Удалить', document, method: :delete, data: { confirm: 'Вы уверены?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Добавить', new_document_path %>

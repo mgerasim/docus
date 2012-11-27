@@ -1,4 +1,6 @@
 Docus::Application.routes.draw do
+  resources :documents
+
   resources :abroads
 
   resources :employees

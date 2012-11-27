@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121112225658) do
+ActiveRecord::Schema.define(:version => 20121127023914) do
 
   create_table "abroads", :force => true do |t|
     t.integer  "employee_id"
@@ -27,6 +27,23 @@ ActiveRecord::Schema.define(:version => 20121112225658) do
   end
 
   add_index "abroads", ["employee_id"], :name => "index_abroads_on_employee_id"
+
+  create_table "documents", :force => true do |t|
+    t.date     "docdate"
+    t.string   "docnumber"
+    t.string   "source"
+    t.string   "name"
+    t.text     "summary"
+    t.string   "subject"
+    t.string   "security_classification"
+    t.string   "mark"
+    t.date     "registration_date"
+    t.string   "registration_number"
+    t.string   "location_document"
+    t.string   "file_number"
+    t.datetime "created_at",              :null => false
+    t.datetime "updated_at",              :null => false
+  end
 
   create_table "employees", :force => true do |t|
     t.string   "lastname"

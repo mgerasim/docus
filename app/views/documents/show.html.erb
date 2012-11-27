@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b><%= Document.human_attribute_name(:docdate) %></b>
+  <%= @document.docdate %>
+</p>
+
+<p>
+  <b><%= Document.human_attribute_name(:docnumber) %></b>
+  <%= @document.docnumber %>
+</p>
+
+<p>
+  <b><%= Document.human_attribute_name(:source) %></b>
+  <%= @document.source %>
+</p>
+
+<p>
+  <b><%= Document.human_attribute_name(:name) %></b>
+  <%= @document.name %>
+</p>
+
+<p>
+  <b><%= Document.human_attribute_name(:summary) %></b>
+  <%= @document.summary %>
+</p>
+
+<p>
+  <b><%= Document.human_attribute_name(:subject) %></b>
+  <%= @document.subject %>
+</p>
+
+<p>
+  <b><%= Document.human_attribute_name(:security_classification) %></b>
+  <%= @document.security_classification %>
+</p>
+
+<p>
+  <b><%= Document.human_attribute_name(:mark) %></b>
+  <%= @document.mark %>
+</p>
+
+<p>
+  <b><%= Document.human_attribute_name(:registration_date) %></b>
+  <%= @document.registration_date %>
+</p>
+
+<p>
+  <b><%= Document.human_attribute_name(:registration_number) %></b>
+  <%= @document.registration_number %>
+</p>
+
+<p>
+  <b><%= Document.human_attribute_name(:location_document) %></b>
+  <%= @document.location_document %>
+</p>
+
+<p>
+  <b><%= Document.human_attribute_name(:file_number) %></b>
+  <%= @document.file_number %>
+</p>
+
+
+<%= link_to 'Редактировать', edit_document_path(@document) %> |
+<%= link_to 'Назад', documents_path %>
