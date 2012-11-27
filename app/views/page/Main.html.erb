@@ -1,2 +1,12 @@
-<h1>Page#Main</h1>
-<p>Find me in app/views/page/Main.html.erb</p>
+<h1>Электронный учёт документов:</h1>
+<p>	<%= link_to "Документы", 					documents_path %> </p>
+<p> <%= link_to "Сотрудники", 					employees_path %> </p>
+<h1>Справочники:</h1>
+<p>	<%= link_to "Выезд за границу",				abroads_path %> </p>
+<p>	<%= link_to "Место работы сотрудника", 		handbook_place_employees_path %>  </p>
+<p>	<%= link_to "Структурное подразделение", 	handbook_structual_units_path %> </p>
+<p>	<%= link_to "Подразделение", 				handbook_divisions_path %> </p>
+<p>	<%= link_to "Должность", 					handbook_jobpositions_path %> </p>
+<p>	<%= link_to "Цель выезда за границу", 		handbook_abroad_traveling_reasons_path %> </p>
+<p>	<%= link_to "Пометка документа", 			handbook_document_marks_path %> </p>
+
