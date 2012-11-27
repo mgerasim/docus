@@ -1,9 +1,9 @@
-<h1>Listing handbook_place_employees</h1>
+<h1>Справочник "Место работы сотрудника"</h1>
 
 <table>
   <tr>
-    <th>Fullname</th>
-    <th>Shortname</th>
+    <th><%= HandbookPlaceEmployee.human_attribute_name(:fullname) %></th>
+    <th><%= HandbookPlaceEmployee.human_attribute_name(:shortname) %></th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,13 +13,13 @@
   <tr>
     <td><%= handbook_place_employee.fullname %></td>
     <td><%= handbook_place_employee.shortname %></td>
-    <td><%= link_to 'Show', handbook_place_employee %></td>
-    <td><%= link_to 'Edit', edit_handbook_place_employee_path(handbook_place_employee) %></td>
-    <td><%= link_to 'Destroy', handbook_place_employee, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Показать', handbook_place_employee %></td>
+    <td><%= link_to 'Редактировать', edit_handbook_place_employee_path(handbook_place_employee) %></td>
+    <td><%= link_to 'Удалить', handbook_place_employee, method: :delete, data: { confirm: 'Вы уверены?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Handbook place employee', new_handbook_place_employee_path %>
+<%= link_to 'Добавить', new_handbook_place_employee_path %>

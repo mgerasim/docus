@@ -1,15 +1,15 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Fullname:</b>
+  <b><%= HandbookPlaceEmployee.human_attribute_name(:fullname) %>:</b>
   <%= @handbook_place_employee.fullname %>
 </p>
 
 <p>
-  <b>Shortname:</b>
+  <b><%= HandbookPlaceEmployee.human_attribute_name(:shortname) %>:</b>
   <%= @handbook_place_employee.shortname %>
 </p>
 
 
-<%= link_to 'Edit', edit_handbook_place_employee_path(@handbook_place_employee) %> |
-<%= link_to 'Back', handbook_place_employees_path %>
+<%= link_to 'Редактировать', edit_handbook_place_employee_path(@handbook_place_employee) %> |
+<%= link_to 'Назад', handbook_place_employees_path %>

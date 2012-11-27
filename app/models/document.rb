@@ -7,7 +7,7 @@ class Document < ActiveRecord::Base
   	:file_number => "Номер дела",
   	:location_document => "Место нахождения документа",
   	:mark => "Пометка",
-  	:name => "Нименование документа",
+  	:name => "Наименование документа",
   	:registration_date => "Дата регистрации",
   	:registration_number => "Регистрационный номер",
   	:security_classification => "Гриф секретности",
