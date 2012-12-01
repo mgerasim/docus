@@ -1,15 +1,15 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Fullname:</b>
+  <b><%= HandbookStructualUnit.human_attribute_name(:fullname) %>:</b>
   <%= @handbook_structual_unit.fullname %>
 </p>
 
 <p>
-  <b>Shortname:</b>
+  <b><%= HandbookStructualUnit.human_attribute_name(:shortname) %>:</b>
   <%= @handbook_structual_unit.shortname %>
 </p>
 
 
-<%= link_to 'Edit', edit_handbook_structual_unit_path(@handbook_structual_unit) %> |
-<%= link_to 'Back', handbook_structual_units_path %>
+<%= link_to 'Редактировать', edit_handbook_structual_unit_path(@handbook_structual_unit) %> |
+<%= link_to 'Назад', handbook_structual_units_path %>

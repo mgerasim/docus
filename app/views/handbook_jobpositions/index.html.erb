@@ -1,9 +1,9 @@
-<h1>Listing handbook_jobpositions</h1>
+<h1>Справочник "Должность"</h1>
 
 <table>
   <tr>
-    <th>Fullname</th>
-    <th>Shortname</th>
+    <th><%= HandbookJobposition.human_attribute_name(:fullname) %></th>
+    <th><%= HandbookJobposition.human_attribute_name(:shortname) %></th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,13 +13,13 @@
   <tr>
     <td><%= handbook_jobposition.fullname %></td>
     <td><%= handbook_jobposition.shortname %></td>
-    <td><%= link_to 'Show', handbook_jobposition %></td>
-    <td><%= link_to 'Edit', edit_handbook_jobposition_path(handbook_jobposition) %></td>
-    <td><%= link_to 'Destroy', handbook_jobposition, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Показать', handbook_jobposition %></td>
+    <td><%= link_to 'Редактировать', edit_handbook_jobposition_path(handbook_jobposition) %></td>
+    <td><%= link_to 'Удалить', handbook_jobposition, method: :delete, data: { confirm: 'Вы уверены?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Handbook jobposition', new_handbook_jobposition_path %>
+<%= link_to 'Добавить', new_handbook_jobposition_path %>

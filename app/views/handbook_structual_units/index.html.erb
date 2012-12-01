@@ -1,9 +1,9 @@
-<h1>Listing handbook_structual_units</h1>
+<h1>Справочник "Структурное подразделение"</h1>
 
 <table>
   <tr>
-    <th>Fullname</th>
-    <th>Shortname</th>
+    <th><%= HandbookStructualUnit.human_attribute_name(:fullname) %></th>
+    <th><%= HandbookStructualUnit.human_attribute_name(:shortname) %></th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,13 +13,13 @@
   <tr>
     <td><%= handbook_structual_unit.fullname %></td>
     <td><%= handbook_structual_unit.shortname %></td>
-    <td><%= link_to 'Show', handbook_structual_unit %></td>
-    <td><%= link_to 'Edit', edit_handbook_structual_unit_path(handbook_structual_unit) %></td>
-    <td><%= link_to 'Destroy', handbook_structual_unit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Показать', handbook_structual_unit %></td>
+    <td><%= link_to 'Редактировать', edit_handbook_structual_unit_path(handbook_structual_unit) %></td>
+    <td><%= link_to 'Удалить', handbook_structual_unit, method: :delete, data: { confirm: 'Вы уверены?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Handbook structual unit', new_handbook_structual_unit_path %>
+<%= link_to 'Добавить', new_handbook_structual_unit_path %>
