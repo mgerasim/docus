@@ -1,9 +1,9 @@
-<h1>Listing handbook_divisions</h1>
+<h1>Справочник "Подразделение"</h1>
 
 <table>
   <tr>
-    <th>Fullname</th>
-    <th>Shortname</th>
+    <th><%= HandbookDivision.human_attribute_name(:fullname) %></th>
+    <th><%= HandbookDivision.human_attribute_name(:shortname) %></th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,13 +13,13 @@
   <tr>
     <td><%= handbook_division.fullname %></td>
     <td><%= handbook_division.shortname %></td>
-    <td><%= link_to 'Show', handbook_division %></td>
-    <td><%= link_to 'Edit', edit_handbook_division_path(handbook_division) %></td>
-    <td><%= link_to 'Destroy', handbook_division, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Показать', handbook_division %></td>
+    <td><%= link_to 'Редактировать', edit_handbook_division_path(handbook_division) %></td>
+    <td><%= link_to 'Удалить', handbook_division, method: :delete, data: { confirm: 'Вы уверены?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Handbook division', new_handbook_division_path %>
+<%= link_to 'Добавить', new_handbook_division_path %>
