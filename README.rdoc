@@ -1,3 +1,28 @@
+
+I'm using Rails 3.0.3, new to Rails 3 and bundler.
+
+I got this same error with:
+
+gem 'mygem', :path => '/path/to/gem'
+
+Resolved by specifying the version number:
+
+gem 'mygem', '0.0.1', :path => '/path/to/gem'
+
+Using >=0.0.1 for the version reverted to the original error. I can't explain any of this, however.
+share|improve this answer
+
+
+
+
+bundle install --local
+
+
+sudo cp .../gems/1.8/gems/cache/*.gem /var/www/html/gems
+
+
+
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
