@@ -1,4 +1,22 @@
 
+
+REM Run the installer silently
+railsinstaller-2.0.0.exe /silent /log "rails-install.log"
+
+REM Install the appropriate gems (Thin web server) we need to run production instances
+call gem install specific_install --no-ri --no-rdoc
+call gem specific_install -l http://github.com/eventmachine/eventmachine.git
+call gem install bundler thin --no-ri --no-rdoc
+
+https://bitbucket.org/alanstevens/kickassruby/src/01e1ec7d9981/InstallFiles/InstallCore.cmd
+https://github.com/PillarTechnology/Telerik-Demo/blob/master/script/EnvInstall.bat
+
+railsinstaller-2.0.0.exe /silent
+
+msiexec /i postgresql-8.0.0-rc1-int.msi  /qr INTERNALLAUNCH=1 ADDLOCAL=server,psql,docs SERVICEDOMAIN="%COMPUTERNAME%"
+        SERVICEPASSWORD="SecretWindowsPassword123" SUPERPASSWORD="VerySecret" BASEDIR="c:\postgres" TRANSFORMS=:lang_de
+
+
 I'm using Rails 3.0.3, new to Rails 3 and bundler.
 
 I got this same error with:
