@@ -1,4 +1,5 @@
 class HandbookPlaceEmployeesController < ApplicationController
+  before_filter :authorize
   # GET /handbook_place_employees
   # GET /handbook_place_employees.json
   def index

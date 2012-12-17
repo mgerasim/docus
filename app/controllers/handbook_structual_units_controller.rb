@@ -1,4 +1,5 @@
 class HandbookStructualUnitsController < ApplicationController
+  before_filter :authorize
   # GET /handbook_structual_units
   # GET /handbook_structual_units.json
   def index

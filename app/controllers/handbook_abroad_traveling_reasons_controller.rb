@@ -1,4 +1,5 @@
 class HandbookAbroadTravelingReasonsController < ApplicationController
+  before_filter :authorize
   # GET /handbook_abroad_traveling_reasons
   # GET /handbook_abroad_traveling_reasons.json
   def index

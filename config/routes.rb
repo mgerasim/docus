@@ -1,4 +1,18 @@
 Docus::Application.routes.draw do
+  resources :users
+
+  get "auth/login"
+
+  get "auth/logout"
+
+  get "auth/add_user"
+
+  post "auth/login"
+
+  post "auth/logout"
+
+  post "auth/add_user"
+
   resources :documents
 
   resources :abroads
@@ -22,6 +36,10 @@ Docus::Application.routes.draw do
   resources :handbook_place_employees
 
   root :to => 'page#Main'
+
+  match '/logout',  :to => 'auth#logout'
+  match '/login', :to => 'auth#login'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

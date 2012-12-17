@@ -1,4 +1,5 @@
 class AbroadsController < ApplicationController
+  before_filter :authorize
   # GET /abroads
   # GET /abroads.json
   def index

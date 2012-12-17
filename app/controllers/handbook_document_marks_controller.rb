@@ -1,4 +1,5 @@
 class HandbookDocumentMarksController < ApplicationController
+  before_filter :authorize
   # GET /handbook_document_marks
   # GET /handbook_document_marks.json
   def index

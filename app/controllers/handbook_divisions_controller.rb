@@ -1,4 +1,5 @@
 class HandbookDivisionsController < ApplicationController
+  before_filter :authorize
   # GET /handbook_divisions
   # GET /handbook_divisions.json
   def index

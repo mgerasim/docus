@@ -1,0 +1,20 @@
+<div>
+<fieldset>
+<legend>Зарегистрируйтесь, пожалуйста</legend>
+<%= form_tag do %>
+<p>
+<label for="name">Имя:</label><br>
+<%= select(:user, :name, User.all.collect{|p| [ p.name, p.name ] } ) %>
+</p>
+<p>
+<label for="password">Пароль:</label><br>
+<%= password_field_tag :password, params[:password] %>
+</p>
+
+<p>
+<%= submit_tag "Регистрация" %>
+</p>
+
+<% end %>
+</fieldset>
+</div>
