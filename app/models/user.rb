@@ -26,8 +26,8 @@ class User < ActiveRecord::Base
      encrypted_password == encrypt(submitted_password)
     end
 
-    def self.authenticate(name, submitted_password)
-     user = find_by_name(name)
+    def self.authenticate(id, submitted_password)
+     user = find_by_id(id)
      return nil if user.nil?
      return user if user.has_password?(submitted_password)
     end

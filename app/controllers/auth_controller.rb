@@ -3,7 +3,7 @@ class AuthController < ApplicationController
   def login
   	session[:user_id] = nil
     if request.post?
-      user = User.authenticate(params["user[name]"], params[:password])
+      user = User.authenticate(params["user"][:id], params[:password])
       if user
         session[:user_id] = user.id
         redirect_to(:controller => "page", :action => "Main")
